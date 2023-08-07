@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage Demo</title>
+    <script>
+      function save() {
+        let txtName = document.getElementById("name");
+        let txtAge = document.getElementById("age");
+        let userName = txtName.value;
+        let userAge = txtAge.value;
+        localStorage.setItem("name", "userName");
+        localStorage.setItem("age", "userAge");
+        txtName.value = "";
+        txtAge.value = "";
+      }
+      function load() {
+        let txtName = document.getElementById("name");
+        let txtAge = document.getElementById("age");
+        txtName.value = localStorage.getItem("name");
+        txtAge.value = localStorage.getItem("age");
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Your Details</h3>
+    <b>Name:</b><br />
+    <input type="text" id="name" /><br />
+    <b>Age:</b><br />
+    <input type="number" id="age" /><br />
+    <button onclick="save()">Save</button>
+    <button onclick="load()">Load</button>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance Demo 3</title>
+    <script>
+      class Vehicle {
+        constructor() {
+          document.write("Vehicle Constructor is Called...<br>");
+        }
+        accelerate() {
+          document.write("accelerating...<br>");
+        }
+      }
+      class Car extends Vehicle {
+        constructor() {
+          super();
+          document.write("Car Constructor is called...<br>");
+        }
+        reverse() {
+          document.write("reversing...<br>");
+        }
+      }
+      let maruti = new Car();
+      maruti.accelerate();
+      maruti.reverse();
+    </script>
+  </head>
+  <body></body>
+</html>

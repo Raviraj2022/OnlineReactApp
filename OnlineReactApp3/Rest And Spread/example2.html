@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Parameter example 2</title>
+    <script>
+      function marksheet(name, ...args) {
+        let sum = 0;
+        for (let x of args) {
+          sum += x;
+        }
+        document.write(
+          "Name is " + name + " and total marks are:" + sum + "<br>"
+        );
+      }
+      marksheet("ravi", 10, 20);
+      marksheet("ramesh", 10, 20, 30);
+    </script>
+  </head>
+  <body></body>
+</html>

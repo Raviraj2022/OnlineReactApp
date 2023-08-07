@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Example 9</title>
+    <script>
+      class Emp {
+        ename;
+        salary;
+        constructor(name, sal) {
+          this.ename = name;
+          this.salary = sal;
+        }
+        raiseSalary() {
+          this.salary = this.salary + this.salary * 0.1;
+        }
+      }
+      let e1 = new Emp("Raju", 10000.0);
+      document.write("before incrementing...");
+      document.write("<br>name =" + e1.ename + "," + "salary =" + e1.salary);
+      let e2 = new Emp("Ram", 20000.0);
+      document.write("<br>name =" + e2.ename + "," + "salary =" + e2.salary);
+      document.write("<br>After incrementing");
+      e1.raiseSalary();
+      e2.raiseSalary();
+      document.write("<br>name =" + e1.ename + "," + "salary =" + e1.salary);
+      document.write("<br>name =" + e2.ename + "," + "salary =" + e2.salary);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Eighth React App</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root">
+      <script>
+        function myApp() {
+          let myPara = React.createElement(
+            "p",
+            null,
+            "React is A JS Based Component"
+          );
+          let myDiv = React.createElement("div", null, "React Is Love", myPara);
+          return myDiv;
+        }
+
+        ReactDOM.render(myApp(), document.querySelector("#root"));
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Sixth React App</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root">
+      <script>
+        function myApp() {
+          let myDiv = React.createElement("div", null, [
+            React.createElement("h1", null, "What is React??"),
+            React.createElement(
+              "p",
+              null,
+              "React is  A Component based Library "
+            ),
+          ]);
+          return myDiv;
+        }
+
+        ReactDOM.render(myApp(), document.querySelector("#root"));
+      </script>
+    </div>
+  </body>
+</html>

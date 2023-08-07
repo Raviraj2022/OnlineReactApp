@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JSX Example 2</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <script type="text/babel">
+        function getNumber() {
+          let myNums = [3, 7, 11, 12, 8, 14, 19, 22, 89, 21];
+          let index = Math.floor(Math.random() * myNums.length);
+          return myNums[index];
+        }
+        function myApp() {
+          let radNum = getNumber();
+          let myDiv = (
+            <div>
+              <p>Number is {radNum}</p>
+              <small>
+                It is an {radNum % 2 == 0 ? <b>Even</b> : <b>Odd</b>} Number
+              </small>
+            </div>
+          );
+          return myDiv;
+        }
+
+        ReactDOM.render(
+          React.createElement(myApp),
+          document.querySelector("#root")
+        );
+      </script>
+    </div>
+  </body>
+</html>

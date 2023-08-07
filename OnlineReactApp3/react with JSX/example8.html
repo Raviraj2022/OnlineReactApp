@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Clock using Vanilla JS</title>
+
+    <style>
+      h1 {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      function Clock() {
+        let div = document.querySelector("#root");
+        let now = new Date().toLocaleString();
+        div.innerHTML = "<div><h1>My Clock Component</h1>";
+        div.innerHTML += `<p>Current Date and Time are ${now}</p></div>`;
+      }
+
+      setInterval(Clock, 1000);
+    </script>
+  </body>
+</html>

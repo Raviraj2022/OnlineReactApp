@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Example 9</title>
+    <script>
+      class Emp {
+        ename;
+        salary;
+        constructor(name, sal) {
+          this.ename = name;
+          this.salary = sal;
+        }
+      }
+      let e1 = new Emp("Raju", 10000.0);
+      document.write("name =" + e1.ename + "," + "salary =" + e1.salary);
+      let e2 = new Emp("Pawan", 20000.0);
+      document.write("<br>name =" + e2.ename + "," + "salary =" + e2.salary);
+    </script>
+  </head>
+  <body></body>
+</html>
